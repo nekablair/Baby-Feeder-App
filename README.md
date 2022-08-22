@@ -1,4 +1,4 @@
-### Hi there 👋, Baby Feeding Timer Project
+### Baby Feeding Timer Project
 ![](https://arturssmirnovs.github.io/github-profile-readme-generator/images/banner.png)
 
 This project assists mothers in keeping a detailed log of how often and for how long their baby breastfeeds.
