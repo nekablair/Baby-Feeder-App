@@ -12,9 +12,9 @@ Skills: JS / HTML / CSS
 
 Contributors:
 
-Ibimina Hart
-Titilola Oduwole
-Ikem Ada
+Ibimina Hart|
+Titilola Oduwole|
+Ikem Ada|
 Taneka Blair
 
 
