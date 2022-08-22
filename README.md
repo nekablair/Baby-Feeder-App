@@ -1,5 +1,5 @@
 ### Baby Feeder App
-![](https://arturssmirnovs.github.io/github-profile-readme-generator/images/banner.png)
+![](https://github.com/istoga/Baby-Feeding-Timer-Project/blob/main/Baby%20Feeder%20App.png)
 
 This project assists mothers in keeping a detailed log of how often and for how long their baby breastfeeds.
 
