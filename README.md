@@ -10,8 +10,12 @@ bottle feeding.
 
 Skills: JS / HTML / CSS
 
-- 🔭 I’m currently working on this page. 
-- 🌱 I’m currently learning JavaScript/React 
+Contributors:
+
+Ibimina Hart
+Titilola Oduwole
+Ikem Ada
+Taneka Blair
 
 
 
