@@ -12,10 +12,10 @@ Skills: JS / HTML / CSS
 
 Contributors:
 
-Ibimina Hart|
-Titilola Oduwole|
-Ikem Ada|
-Taneka Blair
+[Ibimina Hart](https://github.com/ibimina)
+[Titilola Oduwole](https://github.com/titiodus)
+[Ikem Ada](https://github.com/Violacordis)
+[Taneka Blair](https://github.com/istoga)
 
 
 MIT License
