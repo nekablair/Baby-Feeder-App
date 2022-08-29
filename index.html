@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Baby Feeder App</title>
+    <!-- alternate names Forbaby,  -->
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Baby Feeder App</h1>
+
+        <!-- option with radio buttons -->
+        <div class="sides">
+            <input type="radio" class="left" name="nurse-side" value="left-side">
+            <label for="left-side">left</label>
+            <input type="radio" class="right" name="nurse-side" value="right-side">
+            <label for="right-side">right</label>
+        </div>
+
+        <!-- option with text/links -->
+        <div class="sides">
+            <h2 id="left">left</h2>
+            <h2 id="right">right</h2>
+        </div>
+
+        <!-- timer -->
+        <div class="timer"></div>
+
+        <!-- start and stop buttons -->
+        <div class="start-stop-btns">
+            <button class="start">start</button>
+            <button class="stop">stop</button>
+        </div>
+
+        <!-- button to see feeding logs -->
+        <button class="logs">feeding logs</button>
+    </div>
+</body>
+</html>
