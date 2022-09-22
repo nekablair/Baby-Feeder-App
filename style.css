@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+  
+    box-sizing: border-box;
+}
+
+img,figure{
+  display: block;
+  max-width: 100%;
+}
+body {
+     text-transform: uppercase(); 
+     width: 100%;
+     min-height: 100vh;
+     font-size: 16px;
+     line-height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image:url("./images/memphis-colorful.webp");
+  
+
+  background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    padding: 2em;
+  background: lavender;
+  border-radius: 10px;
+  
+}
+
+.left,
+.right {
+    background: #D9D9D9;
+
+    height: auto;
+}
+
+input[type="radio"] {
+    transform: scale(5);
+    margin: 2rem;
+    cursor: pointer;
+}
+.sides{
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  margin-bottom: 2em;
+  width:100%;
+}
+.flex{
+  display: flex;
+  flex-direction: column;
+}
+.btn{
+  padding: .5em 1em;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+}
+.start {
+  background: green;
+}
+.start:hover{
+  background-color:black;
+  color: green;
+  transition: 500ms ease-in-out;
+}
+.stop {
+  background: red;
+}
+.stop:hover{
+  background-color:black;
+  color: red;
+  transition: 500ms ease-in-out;
+}
+.start-stop-btns{
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+.logs{
+  text-decoration: none;
+  font-weight: 700;
+  color:#030372;
+}
+.logs:hover,
+.log:focus{
+  cursor: pointer;
+  color:black;
+
+  
+}
