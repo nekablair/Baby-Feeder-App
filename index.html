@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="style.css">
     <title>Baby Feeder App</title>
     <!-- alternate names Forbaby,  -->
+<!--     forBaby, Babyplace, Babyhub -->
 </head>
 <body>
+    <h1 class="title">Baby Feeder App</h1>
     <div class="container">
-        <h1 class="title">Baby Feeder App</h1>
+        
 
         <!-- option with radio buttons -->
-        <div class="sides">
+        <form class="sides">
             <label for="left-side " class="flex">
             <input type="radio" class="left" name="nurse-side" value="left-side">
             <span>left</span>  
@@ -23,7 +25,7 @@
             <input type="radio" class="right" name="nurse-side" value="right-side">
              <span>right</span>
            </label>
-        </div>
+        </form>
 
         <!-- option with text/links -->
 <!--         <div class="sides">
@@ -32,17 +34,21 @@
         </div> -->
 
         <!-- timer -->
-        <div class="timer"></div>
+        <div class="timer">
+        <h2 id="watch">00:00:00:00</h2>
+      </div>
 
         <!-- start and stop buttons -->
         <div class="start-stop-btns">
             <button class="start btn">start</button>
-            <button class="stop btn">stop</button>
+            <button class="reset btn">reset</button>
+            <button class="stop btn">pause</button>
         </div>
 
         <!-- button to see feeding logs -->
       <a href="#" class="logs"> Feeding logs</a>
    
     </div>
+  <script src="script.js"></script>
 </body>
 </html>

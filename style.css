@@ -18,7 +18,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image:url("./images/memphis-colorful.webp");
+  background-image:url("./img/memphis-colorful.webp");
   
 
   background-size: cover;
