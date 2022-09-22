@@ -16,6 +16,7 @@ body {
      font-size: 16px;
      line-height: 22px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-image:url("./images/memphis-colorful.webp");
@@ -71,6 +72,16 @@ input[type="radio"] {
 .start:hover{
   background-color:black;
   color: green;
+  transition: 500ms ease-in-out;
+}
+
+.reset {
+  background: rgb(61, 56, 58);
+  color: #fff;
+}
+.reset:hover{
+  background-color:rgb(126, 12, 58);
+  color: rgb(239, 244, 139);
   transition: 500ms ease-in-out;
 }
 .stop {
