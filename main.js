@@ -10,7 +10,7 @@ const leftFoodBank = document.querySelector(".left");
 const rightFoodBank = document.querySelector(".right");
 const startBtn = document.querySelector(".start");
 const pauseBtn = document.querySelector(".stop");
-let foodBankChosen;
+let foodBankChosen = '';
 let feedingLog = []
 
 
@@ -23,16 +23,20 @@ let integer = null
 // Add event listerner
 leftFoodBank.addEventListener("click", () => {
   foodBankChosen = 'leftFoodBank'
-
+  startBtn.disabled = false
 })
 
 rightFoodBank.addEventListener("click", () => {
   foodBankChosen = 'rightFoodBank'
+  startBtn.disabled = false
 })
 
 startBtn.addEventListener("click",displayTimer )
 
 function displayTimer(){
+  if (foodBankChosen !== '') {
+    // startBtn.disabled = false
+  }
 if(integer !== null){
   clearInterval(integer)
 }
@@ -76,20 +80,26 @@ const getResetBtn = document.querySelector(".reset")
   let minutes = getTime.getMinutes()
   let seconds = getTime.getSeconds()
   let hours = getTime.getHours()
+
 getResetBtn.addEventListener("click",()=>{
   //before the stopwatch is reset get the log
  let stopWatchData = getStopWatchEl.textContent;
-
+  startBtn.disabled = true
+if (stopWatchData !== '00:00:00:00') {
   let log = {
     date,
     time:`${hours}:${minutes}:${seconds}`,
     foodBankChosen, 
     stopWatchData
   };
+  recentLog()
      // console.log(log);
     //push log into the feedinglog 
      feedingLog.push(log);
      console.log(feedingLog);
+  
+  const localStorageLog = JSON.stringify(feedingLog)
+  localStorage.setItem('log', localStorageLog)
    //clear the stopwatch
    clearInterval(integer);
    [hrs,min,sec,millisec]=[00,00,00,00];
@@ -97,27 +107,23 @@ getResetBtn.addEventListener("click",()=>{
   getStopWatchEl.textContent= '00:00:00:00';
  leftFoodBank.checked=false
   rightFoodBank.checked=false
+} 
 })
+
+  
 
 pauseBtn.addEventListener("click",()=>{
-clearInterval(integer)
-  //moved this function to the reset
-  
-  // let timer = getStopWatchEl.textContent
-  // let date = new Date().toDateString()
-  // let log = {
-  //   foodBankChosen, date, timer
-  // }
-  // console.log(log)
-  // if(timer !== null) {
-  //   console.log(timer)
-  //   // feedingLog.push(log)
-  // }
-  
+clearInterval(integer) 
 })
 
+// create function to display most recent feeding time under the feeding log link
 //create function to grab whatever is in the timer textContent and place into feeding logs
 //make sure each time you click radio buttons the timer needs to reset to zero
 
+const recentLog = () => { 
+if (getStopWatchEl.textContent !== '00:00:00:00') { document.querySelector('.recentlog').textContent = getStopWatchEl.textContent
+}
+                        
+}
 
 
