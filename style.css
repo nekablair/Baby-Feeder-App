@@ -20,7 +20,7 @@ body {
   align-items: center;
   justify-content: center;
   background-image:url("./images/memphis-colorful.webp");
-  
+  margin: 0;
 
   background-size: cover;
 }
@@ -108,4 +108,38 @@ input[type="radio"] {
   color:black;
 
   
+}
+li{
+  list-style: none;
+  background: #fbf3f3;
+  border-radius: 10px;
+  margin-bottom: 2em;
+  padding: 1em;
+  position: relative;
+}
+
+.block{
+  display: block;
+}
+
+.trash{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url("./images/trash.png");
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 15px;
+  width: 15px;
+  border: 0;
+}
+
+@media(min-width: 60rem){
+  ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1em;
+  }
 }
