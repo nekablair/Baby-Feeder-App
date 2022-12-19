@@ -124,8 +124,8 @@ li{
 
 .trash{
   position: absolute;
-  top: 0;
-  right: 0;
+  top: .5em;
+  right: 1em;
   background-image: url("./images/trash.png");
   background-color: transparent;
   background-position: center;
@@ -134,6 +134,7 @@ li{
   height: 15px;
   width: 15px;
   border: 0;
+  cursor:pointer;
 }
 
 @media(min-width: 60rem){

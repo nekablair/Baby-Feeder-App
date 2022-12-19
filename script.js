@@ -35,7 +35,7 @@ startBtn.addEventListener("click", displayTimer)
 
 function displayTimer() {
   if (foodBankChosen !== '') {
-    // startBtn.disabled = false
+    startBtn.disabled = false
   }
   if (integer !== null) {
     clearInterval(integer)
@@ -85,15 +85,18 @@ getResetBtn.addEventListener("click", () => {
   //before the stopwatch is reset get the log
   let stopWatchData = getStopWatchEl.textContent;
   startBtn.disabled = true
+  let uid = generateId()
+
   if (stopWatchData !== '00:00:00:00') {
     let log = {
+      uid,
       date,
       time: `${hours}:${minutes}:${seconds}`,
       foodBankChosen,
       stopWatchData
     };
     recentLog()
-    // console.log(log);
+
     //push log into the feedinglog 
     feedingLog.push(log);
     console.log(feedingLog);
@@ -111,7 +114,7 @@ getResetBtn.addEventListener("click", () => {
 })
 
 
-
+0
 pauseBtn.addEventListener("click", () => {
   clearInterval(integer)
 })
@@ -128,3 +131,9 @@ const recentLog = () => {
 }
 
 
+//function to generate a unique id
+const generateId = () => {
+    return `${performance.now()}${Math.random().toString().slice(5)}`.replace('.',"a")}
+
+
+  
