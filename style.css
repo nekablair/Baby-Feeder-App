@@ -20,8 +20,7 @@ body {
   align-items: center;
   justify-content: center;
   background-image:url("./images/memphis-colorful.webp");
-  
-
+  margin: 0;
   background-size: cover;
 }
 
