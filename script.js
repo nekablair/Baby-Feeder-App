@@ -14,6 +14,12 @@ let foodBankChosen = '';
 let feedingLog = []
 
 
+// check if there is a stored log 
+//update the log if true
+let getStoredLog =  JSON.parse(localStorage.getItem("log"))  
+if(getStoredLog){
+  feedingLog = getStoredLog
+}
 
 const getStopWatchEl = document.querySelector("#watch")
 

@@ -11,7 +11,6 @@ const feedingLog = document.querySelector(".feedingLog")
 
 function deleteLog(e){
   let FeedingLogId=e.target.parentNode.id
-      console.log(FeedingLogId)
     
      //filter feeding log array
       parseLog=parseLog.filter(id=>id.uid !== FeedingLogId)
