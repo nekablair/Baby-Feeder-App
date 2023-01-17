@@ -107,6 +107,7 @@ getResetBtn.addEventListener("click", () => {
     feedingLog.push(log);
     
     localStorage.setItem('log', JSON.stringify(feedingLog))
+  
     //clear the stopwatch
     clearInterval(integer);
     [hrs, min, sec, millisec] = [00, 00, 00, 00];
@@ -118,7 +119,6 @@ getResetBtn.addEventListener("click", () => {
 })
 
 
-0
 pauseBtn.addEventListener("click", () => {
   clearInterval(integer)
 })

@@ -15,7 +15,7 @@ Contributors:
 [Ibimina Hart](https://github.com/ibimina)
 [Titilola Oduwole](https://github.com/titiodus)
 [Ikem Ada](https://github.com/Violacordis)
-[Taneka Blair](https://github.com/istoga)
+[Neka Blair](https://github.com/istoga)
 
 
 MIT License
