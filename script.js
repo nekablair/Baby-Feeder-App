@@ -14,6 +14,12 @@ let foodBankChosen = '';
 let feedingLog = []
 
 
+// check if there is a stored log 
+//update the log if true
+let getStoredLog =  JSON.parse(localStorage.getItem("log"))  
+if(getStoredLog){
+  feedingLog = getStoredLog
+}
 
 const getStopWatchEl = document.querySelector("#watch")
 
@@ -35,7 +41,7 @@ startBtn.addEventListener("click", displayTimer)
 
 function displayTimer() {
   if (foodBankChosen !== '') {
-    // startBtn.disabled = false
+    startBtn.disabled = false
   }
   if (integer !== null) {
     clearInterval(integer)
@@ -85,21 +91,22 @@ getResetBtn.addEventListener("click", () => {
   //before the stopwatch is reset get the log
   let stopWatchData = getStopWatchEl.textContent;
   startBtn.disabled = true
+  let uid = generateId()
+
   if (stopWatchData !== '00:00:00:00') {
     let log = {
+      uid,
       date,
       time: `${hours}:${minutes}:${seconds}`,
       foodBankChosen,
       stopWatchData
     };
     recentLog()
-    // console.log(log);
+
     //push log into the feedinglog 
     feedingLog.push(log);
-    console.log(feedingLog);
-
-    const localStorageLog = JSON.stringify(feedingLog)
-    localStorage.setItem('log', localStorageLog)
+    
+    localStorage.setItem('log', JSON.stringify(feedingLog))
     //clear the stopwatch
     clearInterval(integer);
     [hrs, min, sec, millisec] = [00, 00, 00, 00];
@@ -111,7 +118,7 @@ getResetBtn.addEventListener("click", () => {
 })
 
 
-
+0
 pauseBtn.addEventListener("click", () => {
   clearInterval(integer)
 })
@@ -128,3 +135,9 @@ const recentLog = () => {
 }
 
 
+//function to generate a unique id
+const generateId = () => {
+    return `${performance.now()}${Math.random().toString().slice(5)}`.replace('.',"a")}
+
+
+  
