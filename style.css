@@ -105,7 +105,40 @@ input[type="radio"] {
 .logs:hover,
 .log:focus{
   cursor: pointer;
-  color:black;
+  color:black; 
+}
+li{
+  list-style: none;
+  background: #fbf3f3;
+  border-radius: 10px;
+  margin-bottom: 2em;
+  padding: 1em;
+  position: relative;
+}
 
-  
+.block{
+  display: block;
+}
+
+.trash{
+  position: absolute;
+  top: .5em;
+  right: 1em;
+  background-image: url("./images/trash.png");
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 15px;
+  width: 15px;
+  border: 0;
+  cursor:pointer;
+}
+
+@media(min-width: 60rem){
+  ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1em;
+  }
 }
